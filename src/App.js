@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import NavigatorBar from "./components/NavigatorBar";
+import {Container, Row, Col} from "react-bootstrap";
+import Welcome from "./components/Welcome"
+import Footer from "./components/Footer"
 
 function App() {
+
+  const marginTop = {
+    marginTop : "20px"
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+     <NavigatorBar/>
+     <Container>
+        <Row>
+          <Col  lg={12} style={marginTop}>
+            <Welcome />
+          </Col>
+        </Row>
+     </Container>
+     <Footer/>
     </div>
   );
 }
